@@ -8,6 +8,12 @@ Instead of searching for random websites full of ads, popups, or paywalls, Tiny 
 
 ---
 
+## 🚀 Live Demo
+
+**Check out the live demo:** [tinytools-preview.vercel.app](https://tinytools-preview.vercel.app)
+
+---
+
 ## The Core Idea
 
 > One tool. One purpose. Zero clutter.
@@ -36,27 +42,20 @@ If a tool needs a tutorial or multiple steps, it probably doesn't belong here.
 
 ---
 
-## Examples of Tools
+## ✅ Available Tools
 
 ### Text & Dev Utilities
-- JSON Formatter & Validator
-- Base64 Encoder / Decoder
-- URL Encode / Decode
-- Case Converter (camelCase, snake_case, kebab-case)
-- Slug Generator
-- JWT Decoder
+- **JSON Formatter & Validator** - Format and validate JSON with real-time feedback
+- **Base64 Encoder / Decoder** - Two-way conversion with mode toggle
+- **URL Encode / Decode** - Convert text to URL-safe format and back
+- **UUID Generator** - Generate unique identifiers (1-100 at once)
 
 ### UI & Design Helpers
-- Color Palette Generator
-- CSS Gradient Generator
-- Box Shadow Generator
-- Tailwind utility helpers
-- `clamp()` font-size generator
+- **Color Palette Generator** - Create harmonious color palettes from any base color
+- **CSS Gradient Generator** - Design beautiful gradients with live preview
 
 ### File & Misc
-- Image Compressor (client-side)
-- Image to WebP converter
-- UUID Generator
+- More tools coming soon...
 
 ---
 
@@ -92,6 +91,7 @@ If a tool needs a tutorial or multiple steps, it probably doesn't belong here.
 - **Framer Motion** for animations
 - **GSAP** for advanced animations
 - **AOS** for scroll animations
+- **Lucide React** for beautiful icons
 
 ---
 
@@ -106,7 +106,7 @@ If a tool needs a tutorial or multiple steps, it probably doesn't belong here.
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/evilshxt/tinytools.git
 cd tinytools
 
 # Install dependencies
@@ -130,12 +130,22 @@ npm run preview
 tinytools/
 ├── src/
 │   ├── components/     # Reusable UI components
-│   ├── tools/          # Individual tool implementations
+│   │   ├── Sidebar.tsx
+│   │   └── ui/       # Individual tool implementations
+│   │       ├── DefaultTool.tsx
+│   │       ├── JsonFormatter.tsx
+│   │       ├── Base64Encoder.tsx
+│   │       ├── UuidGenerator.tsx
+│   │       ├── UrlEncoder.tsx
+│   │       ├── ColorPalette.tsx
+│   │       └── CssGradient.tsx
 │   ├── hooks/          # Custom React hooks
 │   ├── utils/          # Utility functions
 │   ├── types/          # TypeScript type definitions
 │   └── styles/         # Global styles and Tailwind config
 ├── public/             # Static assets
+│   ├── favicon.svg
+│   └── manifest.json
 └── dist/               # Build output
 ```
 
@@ -186,10 +196,12 @@ If you can explain a tool in one sentence, it probably fits.
 
 ## License
 
-[Add your license here]
+MIT License - feel free to use this project for your own purposes!
 
 ---
 
 ## Acknowledgments
 
 Built with modern web technologies to make developers' lives easier, one tiny tool at a time.
+
+**Special thanks to the open-source community for the amazing tools and libraries that make this project possible!**

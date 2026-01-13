@@ -1,0 +1,31 @@
+{
+  "name": "Tiny Tools - Fast Utilities",
+  "short_name": "Tiny Tools",
+  "description": "Fast, clean utilities for daily work - JSON formatter, Base64 encoder, UUID generator, and more",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["productivity", "utilities", "developer", "design"],
+  "lang": "en",
+  "scope": "/",
+  "prefer_related_applications": false
+}
