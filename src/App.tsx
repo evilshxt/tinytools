@@ -3,6 +3,10 @@ import { Wrench, Sun, Moon, Search, Clock } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import DefaultTool from './components/ui/DefaultTool';
 import JsonFormatter from './components/ui/JsonFormatter';
+import Base64Encoder from './components/ui/Base64Encoder';
+import UuidGenerator from './components/ui/UuidGenerator';
+import UrlEncoder from './components/ui/UrlEncoder';
+import ColorPalette from './components/ui/ColorPalette';
 
 function App() {
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
@@ -63,6 +67,14 @@ function App() {
     switch (selectedTool) {
       case 'json-formatter':
         return <JsonFormatter />;
+      case 'base64-encoder':
+        return <Base64Encoder />;
+      case 'uuid-generator':
+        return <UuidGenerator />;
+      case 'url-encoder':
+        return <UrlEncoder />;
+      case 'color-palette':
+        return <ColorPalette />;
       default:
         return (
           <div className="flex items-center justify-center h-full">
