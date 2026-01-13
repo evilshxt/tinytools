@@ -7,6 +7,7 @@ import Base64Encoder from './components/ui/Base64Encoder';
 import UuidGenerator from './components/ui/UuidGenerator';
 import UrlEncoder from './components/ui/UrlEncoder';
 import ColorPalette from './components/ui/ColorPalette';
+import CssGradient from './components/ui/CssGradient';
 
 function App() {
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
@@ -75,6 +76,8 @@ function App() {
         return <UrlEncoder />;
       case 'color-palette':
         return <ColorPalette />;
+      case 'css-gradient':
+        return <CssGradient />;
       default:
         return (
           <div className="flex items-center justify-center h-full">
