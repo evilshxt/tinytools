@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Code, Lock, Link, Palette, Droplet, Fingerprint } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Code, Lock, Link, Palette, Droplet, Fingerprint, Hash, FileText, Minimize2, QrCode } from 'lucide-react';
 
 interface Tool {
   id: string;
@@ -21,6 +21,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Palette,
   Droplet,
   Fingerprint,
+  Hash,
+  FileText,
+  Minimize2,
+  QrCode,
 };
 
 const Sidebar: React.FC<SidebarProps> = ({ tools, selectedTool, onToolSelect }) => {

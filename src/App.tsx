@@ -8,6 +8,12 @@ import UuidGenerator from './components/ui/UuidGenerator';
 import UrlEncoder from './components/ui/UrlEncoder';
 import ColorPalette from './components/ui/ColorPalette';
 import CssGradient from './components/ui/CssGradient';
+import QrCodeGenerator from './components/ui/QrCodeGenerator';
+import PasswordGenerator from './components/ui/PasswordGenerator';
+import HashGenerator from './components/ui/HashGenerator';
+import MarkdownPreview from './components/ui/MarkdownPreview';
+import CssMinifier from './components/ui/CssMinifier';
+import CsvToJsonConverter from './components/ui/CsvToJsonConverter';
 
 function App() {
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
@@ -41,6 +47,24 @@ function App() {
       icon: 'Link'
     },
     {
+      id: 'hash-generator',
+      name: 'Hash Generator',
+      category: 'Text & Dev',
+      icon: 'Hash'
+    },
+    {
+      id: 'markdown-preview',
+      name: 'Markdown Preview',
+      category: 'Text & Dev',
+      icon: 'FileText'
+    },
+    {
+      id: 'css-minifier',
+      name: 'CSS Minifier',
+      category: 'Text & Dev',
+      icon: 'Minimize2'
+    },
+    {
       id: 'color-palette',
       name: 'Color Palette Generator',
       category: 'UI & Design',
@@ -53,10 +77,28 @@ function App() {
       icon: 'Droplet'
     },
     {
+      id: 'qr-code-generator',
+      name: 'QR Code Generator',
+      category: 'UI & Design',
+      icon: 'QrCode'
+    },
+    {
+      id: 'password-generator',
+      name: 'Password Generator',
+      category: 'File & Misc',
+      icon: 'Lock'
+    },
+    {
       id: 'uuid-generator',
       name: 'UUID Generator',
       category: 'File & Misc',
       icon: 'Fingerprint'
+    },
+    {
+      id: 'csv-to-json',
+      name: 'CSV to JSON Converter',
+      category: 'File & Misc',
+      icon: 'FileText'
     }
   ];
 
@@ -78,6 +120,18 @@ function App() {
         return <ColorPalette />;
       case 'css-gradient':
         return <CssGradient />;
+      case 'qr-code-generator':
+        return <QrCodeGenerator />;
+      case 'password-generator':
+        return <PasswordGenerator />;
+      case 'hash-generator':
+        return <HashGenerator />;
+      case 'markdown-preview':
+        return <MarkdownPreview />;
+      case 'css-minifier':
+        return <CssMinifier />;
+      case 'csv-to-json':
+        return <CsvToJsonConverter />;
       default:
         return (
           <div className="flex items-center justify-center h-full">
