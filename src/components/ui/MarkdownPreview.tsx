@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FileText, Copy, Check, Eye, EyeOff } from 'lucide-react';
 import { marked } from 'marked';
 
@@ -6,8 +6,20 @@ const MarkdownPreview = () => {
   const [markdown, setMarkdown] = useState('');
   const [copied, setCopied] = useState(false);
   const [showHtml, setShowHtml] = useState(false);
+  const [html, setHtml] = useState('');
 
-  const html = marked(markdown);
+  useEffect(() => {
+    const parseMarkdown = async () => {
+      try {
+        const parsedHtml = await marked(markdown);
+        setHtml(parsedHtml);
+      } catch (error) {
+        console.error('Error parsing markdown:', error);
+        setHtml('');
+      }
+    };
+    parseMarkdown();
+  }, [markdown]);
 
   const copyToClipboard = async (content: string) => {
     try {
