@@ -14,6 +14,7 @@ import HashGenerator from './components/ui/HashGenerator';
 import MarkdownPreview from './components/ui/MarkdownPreview';
 import CssMinifier from './components/ui/CssMinifier';
 import CsvToJsonConverter from './components/ui/CsvToJsonConverter';
+import UrlShortener from './components/ui/UrlShortener';
 
 function App() {
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
@@ -99,6 +100,12 @@ function App() {
       name: 'CSV to JSON Converter',
       category: 'File & Misc',
       icon: 'FileText'
+    },
+    {
+      id: 'url-shortener',
+      name: 'URL Shortener',
+      category: 'File & Misc',
+      icon: 'Link'
     }
   ];
 
@@ -132,6 +139,8 @@ function App() {
         return <CssMinifier />;
       case 'csv-to-json':
         return <CsvToJsonConverter />;
+      case 'url-shortener':
+        return <UrlShortener />;
       default:
         return (
           <div className="flex items-center justify-center h-full">
